@@ -26,33 +26,31 @@ export default function Trends() {
       {trends.map((trend) => {
         return (
           <>
-            <Row className="my-3">
+            <Row className="my-3" key={trend.id}>
               <Col className="text-light text-opacity-50 text-uppercase fs-7">
                 {trend.section}
               </Col>
             </Row>
-            {trend.tags.map((tag) => {
+            {trend.tags.map((tag, index) => {
               return (
-                <Button className="btn-transparent w-100 p-0">
-                  <Row className="m-2">
-                    <Col className="text-start p-0">
-                      <div className="mb-1">{tag.name}</div>
-                      <div className="text-light text-opacity-50 fs-7 ">
-                        {tag.tweetsAmount} Tweets
-                      </div>
-                    </Col>
-                    <Col className="d-flex justify-content-end align-items-center p-0">
-                      <div>
-                        <Button className="btn-transparent rounded-pill py-0 px-3">
-                          <FontAwesomeIcon
-                            icon={faEllipsis}
-                            size="lg"
-                          />
-                        </Button>
-                      </div>
-                    </Col>
-                  </Row>
-                </Button>
+                <Row className="m-2 btn-transparent" key={index}>
+                  <Col className="text-start p-0">
+                    <div className="mb-1">{tag.name}</div>
+                    <div className="text-light text-opacity-50 fs-7 ">
+                      {tag.tweetsAmount} Tweets
+                    </div>
+                  </Col>
+                  <Col className="d-flex justify-content-end align-items-center p-0">
+                    <div>
+                      <Button className="btn-transparent rounded-pill py-0 px-3">
+                        <FontAwesomeIcon
+                          icon={faEllipsis}
+                          size="lg"
+                        />
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
               );
             })}
             <div className="border-bottom border-secondary my-2"></div>

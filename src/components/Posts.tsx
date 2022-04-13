@@ -21,7 +21,7 @@ export default function Posts() {
         )
         .map((post) => {
           return (
-            <Row className="mb-3">
+            <Row className="mb-3" key={post.id}>
               <Col className="bg-primary rounded-4">
                 <Row key={post.id} className="py-3 px-1">
                   <Col sm={1} className="me-3">

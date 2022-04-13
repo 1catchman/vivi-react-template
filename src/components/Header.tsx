@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Navbar,
   Container,
@@ -60,11 +61,13 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link
-              href="#action1"
+              to="/"
               className="header-btn me-2 px-3 text-decoration-none"
               title="Home"
               id="home"
+              role="button"
               active={state.home}
+              as={Link as any}
               onClick={handleClick}
             >
               <FontAwesomeIcon icon={faHouse} size="lg" />
@@ -73,11 +76,13 @@ export default function Header() {
               </span>
             </Nav.Link>
             <Nav.Link
-              href="#action1"
+              to="/messages"
               className="header-btn mx-2 px-3 text-decoration-none"
               title="Messages"
               id="messages"
+              role="button"
               active={state.messages}
+              as={Link as any}
               onClick={handleClick}
             >
               <FontAwesomeIcon icon={faEnvelope} size="lg" />
@@ -87,13 +92,15 @@ export default function Header() {
               </span>
             </Nav.Link>
             <Nav.Link
-              href="#action1"
+              role="button"
               className="header-notifications text-light mx-2 px-3 text-decoration-none"
               active={false}
               title="Notifications"
+              onClick={handleClick}
             >
               <FontAwesomeIcon icon={faBell} size="lg" />
             </Nav.Link>
+
             <div className="vr text-light"></div>
             <NavDropdown
               title={

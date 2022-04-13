@@ -1,9 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Following from './Following';
 import ProfileCard from './ProfileCard';
-import AddPost from './AddPost';
-import Post from './Posts';
-import Trends from './Trends';
+import RoutesLayout from './Routes';
 
 export default function Layout() {
   return (
@@ -24,17 +22,7 @@ export default function Layout() {
             </Col>
           </Row>
         </Col>
-        <Col sm={6}>
-          <Row className="mb-3">
-            <Col className="bg-primary rounded-4">
-              <AddPost />
-            </Col>
-          </Row>
-          <Post />
-        </Col>
-        <Col className="p-0">
-          <Trends />
-        </Col>
+        <RoutesLayout />
       </Row>
     </Container>
   );
