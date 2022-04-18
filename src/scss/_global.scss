@@ -2,6 +2,14 @@
   border-radius: 12px;
 }
 
+.rounded-bottom-right-0 {
+  border-bottom-right-radius: 0 !important;
+}
+
+.rounded-bottom-left-0 {
+  border-bottom-left-radius: 0 !important;
+}
+
 a.link {
   text-decoration: none;
   color: $blue;
@@ -11,12 +19,20 @@ a.link {
   }
 }
 
+.mnx-1 {
+  margin-inline: -12px;
+}
+
 .fs-7 {
   font-size: 12px;
 }
 
 .text-blue {
   color: $blue;
+}
+
+.bg-blue {
+  background-color: $blue;
 }
 
 button.btn {
@@ -53,5 +69,11 @@ button.btn {
         background-color: rgba(255, 255, 255, 0.08);
       }
     }
+  }
+}
+
+.messages {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
   }
 }
