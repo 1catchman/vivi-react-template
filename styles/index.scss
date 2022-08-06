@@ -1,0 +1,82 @@
+@import 'variables';
+@import 'components/header';
+
+.rounded-4 {
+  border-radius: 12px;
+}
+
+.rounded-bottom-right-0 {
+  border-bottom-right-radius: 0 !important;
+}
+
+.rounded-bottom-left-0 {
+  border-bottom-left-radius: 0 !important;
+}
+
+a.link {
+  text-decoration: none;
+  color: $blue;
+  &:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
+}
+
+.mnx-1 {
+  margin-inline: -12px;
+}
+
+.fs-7 {
+  font-size: 12px;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+button.btn {
+  &-white {
+    background-color: $white;
+    transition: all 0.2s;
+    border: 0;
+    &:hover {
+      background-color: $light;
+    }
+    &:focus,
+    &:active:focus {
+      box-shadow: none;
+      background-color: $white;
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+  &-transparent {
+    background-color: transparent;
+    transition: all 0.2s;
+    border: 0;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+    &:active {
+      background-color: transparent;
+    }
+    &:focus {
+      box-shadow: none;
+      background-color: transparent;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+  }
+}
+
+.messages {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
